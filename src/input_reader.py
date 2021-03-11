@@ -1,3 +1,4 @@
+#%%
 def read(filename):
     with open(filename, "r") as f:
         grid = list(map(int, f.readline().split(" ")))
@@ -9,6 +10,9 @@ def read(filename):
         for i in range(0, bar[1]):
             antennas.append(list(map(int, f.readline().split(" "))))
         return grid, bar, buildings, antennas
+
+
+grid, bar, buildings, antennas = read("input/data_scenarios_a_example.in")
 
 def save(filename, antennas):
     with open(filename, "w") as f:
