@@ -9,3 +9,11 @@ def read(filename):
         for i in range(0, bar[1]):
             antennas.append(list(map(int, f.readline().split(" "))))
         return grid, bar, buildings, antennas
+
+def save(filename, antennas):
+    with open(filename, "w") as f:
+        f.write(f"{len(antennas)}\n")
+        for antenna in antennas:
+            f.write(f"{antenna[0]} {antenna[1]} {antenna[2]}\n")
+
+
